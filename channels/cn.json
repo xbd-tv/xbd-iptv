@@ -1,0 +1,110 @@
+[
+    {
+        "title": "CCTV-1 综合",
+        "group": "CCTV",
+        "logo": "https://cdn.jsdelivr.net/gh/xbd-tv/xbd-iptv@main/channels/logo/cn/CCTV1.png",
+        "type": "LIEV",
+        "channel": [
+            {
+                "id": "1",
+                "route": [
+                    {
+                        "uri": "http://39.134.115.163:8080/PLTV/88888910/224/3221225618/index.m3u8",
+                        "grade": 90,
+                        "dpi": 1080
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "CCTV-5 体育",
+        "group": "CCTV",
+        "logo": "https://cdn.jsdelivr.net/gh/xbd-tv/xbd-iptv@main/channels/logo/cn/CCTV5.png",
+        "type": "LIEV",
+        "channel": [
+            {
+                "id": "2",
+                "route": [
+                    {
+                        "uri": "http://39.134.39.39/PLTV/88888888/224/3221226224/index.m3u8",
+                        "grade": 90,
+                        "dpi": 1080
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "CCTV-13 新闻",
+        "group": "CCTV",
+        "logo": "https://cdn.jsdelivr.net/gh/xbd-tv/xbd-iptv@main/channels/logo/cn/CCTV5.png",
+        "type": "LIEV",
+        "channel": [
+            {
+                "id": "2",
+                "route": [
+                    {
+                        "uri": "http://39.134.115.163:8080/PLTV/88888910/224/3221225638/index.m3u8",
+                        "grade": 90,
+                        "dpi": 1080
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "湖南卫视",
+        "group": "湖南",
+        "logo": "https://cdn.jsdelivr.net/gh/xbd-tv/xbd-iptv@main/channels/logo/cn/HNWS.png",
+        "type": "LIEV",
+        "channel": [
+            {
+                "id": "2",
+                "route": [
+                    {
+                        "uri": "http://39.134.66.66/PLTV/88888888/224/3221225506/index.m3u8",
+                        "grade": 90,
+                        "dpi": 1080
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "浙江卫视",
+        "group": "浙江",
+        "logo": "https://cdn.jsdelivr.net/gh/xbd-tv/xbd-iptv@main/channels/logo/cn/ZHEJINGWS.png",
+        "type": "LIEV",
+        "channel": [
+            {
+                "id": "2",
+                "route": [
+                    {
+                        "uri": "http://39.134.66.66/PLTV/88888888/224/3221225514/index.m3u8",
+                        "grade": 90,
+                        "dpi": 1080
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "北京卫视",
+        "group": "北京",
+        "logo": "https://cdn.jsdelivr.net/gh/xbd-tv/xbd-iptv@main/channels/logo/cn/ZHEJINGWS.png",
+        "type": "LIEV",
+        "channel": [
+            {
+                "id": "2",
+                "route": [
+                    {
+                        "uri": "http://39.134.115.163:8080/PLTV/88888910/224/3221225673/index.m3u8",
+                        "grade": 90,
+                        "dpi": 1080
+                    }
+                ]
+            }
+        ]
+    }
+]
