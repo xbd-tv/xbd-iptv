@@ -1,5 +1,6 @@
 [
     {
+        "id": 1,
         "title": "CCTV-1 综合",
         "country": "中国",
         "province": "CCTV 中央电视台",
@@ -20,6 +21,7 @@
         ]
     },
     {
+        "id": 5,
         "title": "CCTV-5 体育",
         "country": "中国",
         "province": "CCTV 中央电视台",
@@ -40,6 +42,7 @@
         ]
     },
     {
+        "id": 13,
         "title": "CCTV-13 新闻",
         "country": "中国",
         "province": "CCTV 中央电视台",
@@ -60,10 +63,11 @@
         ]
     },
     {
+        "id": 100,
         "title": "湖南卫视",
         "country": "中国",
         "province": "湖南",
-        "genre": ["卫视"],
+        "genre": ["湖南", "卫视"],
         "logo": "https://cdn.jsdelivr.net/gh/xbd-tv/xbd-iptv@main/channels/logo/cn/HNWS.png",
         "type": "LIEV",
         "channel": [
@@ -80,10 +84,11 @@
         ]
     },
     {
+        "id": 200,
         "title": "浙江卫视",
         "country": "中国",
         "province": "浙江",
-        "genre": ["卫视"],
+        "genre": ["浙江", "卫视"],
         "logo": "https://cdn.jsdelivr.net/gh/xbd-tv/xbd-iptv@main/channels/logo/cn/ZHEJINGWS.png",
         "type": "LIEV",
         "channel": [
@@ -100,10 +105,11 @@
         ]
     },
     {
+        "id": 300,
         "title": "北京卫视",
         "country": "中国",
         "province": "北京",
-        "genre": ["卫视"],
+        "genre": ["北京", "卫视"],
         "logo": "https://cdn.jsdelivr.net/gh/xbd-tv/xbd-iptv@main/channels/logo/cn/BJWS.png",
         "type": "LIEV",
         "channel": [
