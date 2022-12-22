@@ -5,15 +5,15 @@ import "github.com/gocolly/colly/v2"
 // http://male66.com/ 爬虫
 const domain = "male66.com"
 
-type MaleSpider struct {
+type SpiderMale struct {
 	*SpiderBase
 }
 
-func (c *MaleSpider) Execute() {
+func (c *SpiderMale) Execute() {
 	c.listTv()
 }
 
-func (c *MaleSpider) listTv() {
+func (c *SpiderMale) listTv() {
 	colly := colly.NewCollector(
 		colly.AllowedDomains(domain),
 	)
@@ -21,8 +21,8 @@ func (c *MaleSpider) listTv() {
 	colly.Visit(domain)
 }
 
-func (c *MaleSpider) detailTv() {
+func (c *SpiderMale) detailTv() {
 	c.detailVideo()
 }
-func (c *MaleSpider) detailVideo() {
+func (c *SpiderMale) detailVideo() {
 }

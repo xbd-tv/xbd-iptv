@@ -13,6 +13,7 @@ func main() {
 		Commands: []*cli.Command{
 			&cmd.CmdWeb,
 			&cmd.CmdParseM3u,
+			&cmd.CmdSpider,
 		},
 	}
 	app.Flags = append(app.Flags, cmd.CmdWeb.Flags...)
