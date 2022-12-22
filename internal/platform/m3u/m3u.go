@@ -4,8 +4,11 @@ import (
 	"bufio"
 	"fmt"
 	"io"
+	"net/http"
 	"strconv"
 	"strings"
+
+	"iptv.xbd/internal/platform/log"
 )
 
 // 播放列表
@@ -36,7 +39,11 @@ func parseTvgAttr(s string) (string, string) {
 
 // 校验是否可用
 func checker(allPl *PlayList) PlayList {
+	log.WithFields(log.Fields{
+		"list_count": len(*allPl),
+	}).Debug("checker playlist")
 	pl := PlayList{}
+	//
 	for _, t := range *allPl {
 		if checkerPath(t.Path) {
 			pl = append(pl, t)
@@ -46,7 +53,13 @@ func checker(allPl *PlayList) PlayList {
 }
 
 func checkerPath(path string) bool {
-	return true
+	_, err := http.Get(path)
+	ok := err == nil
+	log.WithFields(log.Fields{
+		"path": path,
+		"ok":   ok,
+	}).Debug("checker path")
+	return ok
 }
 
 func Parse(r io.Reader) (PlayList, error) {
@@ -92,7 +105,9 @@ func Parse(r io.Reader) (PlayList, error) {
 					if err != nil {
 						continue
 					}
+					path = path[:len(path)-1]
 					pl = append(pl, Track{
+						Title: strs[1],
 						Path:  path,
 						Time:  time,
 						Id:    id,

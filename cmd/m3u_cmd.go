@@ -1,7 +1,6 @@
 package cmd
 
 import (
-	"fmt"
 	"os"
 
 	"github.com/urfave/cli/v2"
@@ -28,15 +27,13 @@ var CmdParseM3u = cli.Command{
 
 func runParse(c *cli.Context) error {
 	fileIn := c.String("in")
+	csv := c.String("csv")
 	pl, err := parseFile(fileIn)
 
 	if err != nil {
 		panic(err)
 	}
-	for _, track := range pl {
-		fmt.Printf("%s: %s,%s,%s,%s,(%d)\n", track.Id, track.Title, track.Group, track.Path, track.Logo, track.Time)
-	}
-
+	m3u.ToCsv(&pl, csv)
 	return nil
 }
 
