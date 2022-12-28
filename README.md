@@ -19,3 +19,10 @@ curl https://purge.jsdelivr.net/{....地址}  // 刷新CDN
 
 ### 引用资源
 [IPTV-ORG](https://github.com/iptv-org/iptv)
+
+
+## 开发调试
+1. 测试 m3u 解析
+```bash
+go run main.go m3u --in="C:\Users\feng\Downloads\cn.m3u"
+```

@@ -6,23 +6,25 @@ import "github.com/gocolly/colly/v2"
 const domain = "male66.com"
 
 type SpiderMale struct {
-	*SpiderBase
+	SpiderBase
+	Domain string
 }
 
-func (c *SpiderMale) Execute() {
-	c.listTv()
-}
-
-func (c *SpiderMale) listTv() {
+func (s *SpiderMale) Execute() {
 	colly := colly.NewCollector(
-		colly.AllowedDomains(domain),
+		colly.AllowedDomains(s.Domain),
 	)
-	c.detailTv()
+	s.listTv(colly)
+}
+
+func (s *SpiderMale) listTv(colly *colly.Collector) {
+	s.detailTv(colly.Clone())
 	colly.Visit(domain)
 }
 
-func (c *SpiderMale) detailTv() {
-	c.detailVideo()
+func (s *SpiderMale) detailTv(colly *colly.Collector) {
+	s.detailVideo(colly.Clone())
 }
-func (c *SpiderMale) detailVideo() {
+
+func (s *SpiderMale) detailVideo(colly *colly.Collector) {
 }

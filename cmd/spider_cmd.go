@@ -25,11 +25,15 @@ func runSpider(c *cli.Context) error {
 	male := c.Bool("male")
 	bdys := c.Bool("bdys")
 	if male {
-		spider.SpiderMale{}.Run()
+		s := spider.SpiderMale{
+			Domain: "male16.com",
+		}
+		s.Execute()
 	}
 
 	if bdys {
-		spider.SpiderBdys{}.Run()
+		s := spider.SpiderBdys{}
+		s.Execute()
 	}
 
 	return nil
