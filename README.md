@@ -24,5 +24,5 @@ curl https://purge.jsdelivr.net/{....地址}  // 刷新CDN
 ## 开发调试
 1. 测试 m3u 解析
 ```bash
-go run main.go m3u --in="C:\Users\feng\Downloads\cn.m3u"
+go run main.go m3u --in="examples/cn.m3u"
 ```
