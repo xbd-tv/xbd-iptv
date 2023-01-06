@@ -6,6 +6,7 @@ import (
 
 	"github.com/urfave/cli/v2"
 	"iptv.xbd/cmd"
+	_ "iptv.xbd/internal/autoload"
 )
 
 func main() {

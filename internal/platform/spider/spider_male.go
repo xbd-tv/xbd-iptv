@@ -6,8 +6,7 @@ import "github.com/gocolly/colly/v2"
 const domain = "male66.com"
 
 type SpiderMale struct {
-	SpiderBase
-	Domain string
+	*SpiderBase
 }
 
 func (s *SpiderMale) Execute() {
