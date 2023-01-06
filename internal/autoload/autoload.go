@@ -15,16 +15,13 @@ func init() {
 		envFile = fmt.Sprintf(".env.%s", env)
 	}
 	_, err := os.Stat(envFile)
-	if err == nil {
-		err = godotenv.Load(envFile)
+	if err != nil {
+		return
 	}
 	if os.IsNotExist(err) {
 		return
 	}
-	if err != nil {
-		log.Fatal(err)
-	}
-	err = godotenv.Load()
+	err = godotenv.Load(envFile)
 	if err != nil {
 		log.Fatal(err)
 	}
